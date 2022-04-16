@@ -1,0 +1,20 @@
+li {
+  background-color: yellow;
+}
+.done {
+  background-color: green;
+}
+
+.invalid {
+	border-color: red;
+  color: red;
+  
+}
+input {
+  box-shadow: none;
+  border: 1px solid black;
+  outline: none;
+}
+.error {
+  color: red;
+}
