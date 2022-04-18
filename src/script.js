@@ -30,9 +30,8 @@ input.addEventListener('input', function(event) {
 });
 
 function checkValue(value) {
-    let regExp = /[a-zA-Z0-9]{2,25}/g;     
+    let regExp = /^[a-zA-Z0-9]{2,25}$/g;     
     let check = regExp.test(value);
-    let res = false;
     
     if (!check && value) {
         input.classList.add('invalid');
@@ -40,9 +39,9 @@ function checkValue(value) {
     } else {
         input.classList.remove('invalid');
         errorText.innerText = '';
-        res = true;
+        
     }
-    return res;
+    return check;
 }
 
 function addItem() {
@@ -62,7 +61,6 @@ function removeItem(el) {
 function changeToggle(el) {
     el.classList.toggle('done');
 }
-
 
 
 	
